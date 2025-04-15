@@ -1,0 +1,258 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        
+        {
+            "name": "(UDB) Replay an Undo recording",
+            "type": "cppdbg",
+            "request": "launch",
+            //"program": "",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/u/prod/undo/undo_install/udb_latest/udb",
+            "logging": {
+                "trace": false,
+                "traceResponse": false,
+                "engineLogging": false
+            },
+            "udb": "replay",
+            "timezone": "",
+            "udbConfiguration": {},
+            "sourceFileMap": {
+                "./../../src": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "Vopt General Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "externalConsole": false,
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vopt.debug",
+            "args": ["${input:programArgs}"],
+            "stopAtEntry": false,
+            "cwd": "${input:runDir}",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "sourceFileMap": {
+                "./../../src": "${workspaceFolder}/src"
+            },
+            "showDisplayString": true
+        },
+        {
+            "name": "Vopt General 1 Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "externalConsole": false,
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vopt.debug",
+            "args": ["${input:programArgs}"],
+            "stopAtEntry": false,
+            "cwd": "${input:runDir}",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "sourceFileMap": {
+                "./../../src": "${workspaceFolder}/src"
+            },
+            "showDisplayString": true
+        },
+        {
+            "name": "Vopt New General Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "externalConsole": false,
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vopt.debug",
+            "args": ["${input:programArgs}"],
+            "stopAtEntry": false,
+            "cwd": "${input:runDir}",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "sourceFileMap": {
+                "./../../src": "${workspaceFolder}/src"
+            },
+            "showDisplayString": true
+        },
+        {
+            "name": "Vopt Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vopt.debug",
+            "args": ["-o", "t", "top", "-noincr", "-flps=4"],
+            "stopAtEntry": false,
+            "cwd": "/home/tkumar/FLPS/JIRAs/FAL-ABDO/testplan/master_var/src/master_slave_writers_logic_partsel",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "showDisplayString": true,
+            "sourceFileMap": {
+                "./../../src": "${workspaceFolder}/src"
+            }
+        },
+
+        {
+            "name": "Unisim Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "externalConsole": true,
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vsimk",
+            "args": ["-c", "top"],
+            "stopAtEntry": false,
+            "cwd": "/home/tkumar/FLPS/JIRAs/FAL-9622/test",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/u/prod/inhouse_tools/gdb/gdb-10.2/linux_x86_64/bin/gdb",
+            "showDisplayString": true
+        },
+        {
+            "name": "master UDB",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vsimk",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "master",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vsimk",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "p1",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/modeltech/linux_x86_64/vsimk",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Compound",
+            "configurations": ["master","p1"],
+            "stopAll": true
+        }
+    ],
+    "inputs": [
+        {
+            "id": "programArgs",
+            "type": "promptString",
+            "description": "Enter arguments for the program",
+            "default": "-o t top"
+        },
+                {
+            "id": "runDir",
+            "type": "promptString",
+            "description": "Enter directory for the program",
+            "default": "${workspaceFolder}"
+        }
+
+    ],
+    "logging": {
+        "engineLogging": true,
+        "trace": true,
+        "traceResponse": true
+    }
+}

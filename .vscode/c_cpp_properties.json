@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/src/common/",
+                "${workspaceFolder}/src/common_tcl/",
+                "${workspaceFolder}/src/vcom/",
+                "${workspaceFolder}/src/vlog/",
+                "${workspaceFolder}/src/velab/",
+                "${workspaceFolder}/src/vsim/",
+                "${workspaceFolder}/src/flps/"
+            ],
+            "defines": [],
+            "compilerPath": "/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

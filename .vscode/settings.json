@@ -1,0 +1,105 @@
+{
+    "files.exclude": {
+      "**/.cache/**": true,
+      "**/.visualizer/**": true,
+      "**/tests*/**": true,
+      "**/test_src/**": true,
+      "**/build/**": true,
+      "**/modeltech/**": true,
+      "**/logs/**": true,
+      "**/devapps/**": true,
+      "**/scratch/**": true
+  },
+  "files.watcherExclude": {
+      "**/.cache/**": true,
+      "**/.visualizer/**": true,
+      "**/logs/**": true,
+      "**/questasim/**": true,
+      "**/visualizer/**": true,
+      "**/build/**": true,
+      "**/devapps/**": true,
+      "**/mgc/**": true,
+      "**/modeltech/**": true,
+      "**/oem/**": true,
+      "**/scratch/**": true
+  },
+  "search.exclude": {
+      "**/.cache/**": true,
+      "**/.visualizer/**": true,
+      "**/logs/**": true,
+      "**/questasim/**": true,
+      "**/visualizer/**": true,
+      "**/build/**": true,
+      "**/devapps/**": true,
+      "**/mgc/**": true,
+      "**/modeltech/**": true,
+      "**/oem/**": true,
+      "**/scratch/**": true 
+    },
+    "C_Cpp.workspaceParsingPriority": "low",
+    "C_Cpp.default.includePath": ["$workspace/src"],
+    "C_Cpp.intelliSenseCacheSize": 5120,
+    "restoreTerminals.keepExistingTerminalsOpen": true,
+    "C_Cpp.intelliSenseCachePath": "/bata/tkumar/.cache/vscode-cpptools",
+    "files.associations": {
+        "personality.h": "c",
+        "alloc_all": "cpp",
+        "*.ipp": "c",
+        "array": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "ranges": "c",
+        "span": "c",
+        "regex": "c",
+        "utility": "c",
+        "valarray": "c",
+        "*.inc": "c"
+    },
+    "auto-run-command.rules": [
+        {
+            "condition": "always",
+            "command": "code ~/vscode_settings/DAILY_README.md",
+            "message": "opening daily readme",
+            "shellCommand": true
+
+        }
+    ],
+    "codeQL.createQuery.qlPackLocation": "/home/tkumar/sandbox/main3",
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+      },
+      {
+        "before": ["K"],
+        "commands": ["lineBreakInsert"],
+        "silent": true
+      }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+
+    "// To improve performance",
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    }
+}

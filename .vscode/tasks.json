@@ -1,0 +1,173 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "/u/prod/bin/mtimake",
+            "args": [
+                "--remote",
+                "-enable-redis"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build/linux_x86_64"
+            },
+            "problemMatcher": [
+                {
+                    "base": "$gcc",
+                    "background": {},
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ]
+                },
+                {
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(required from here)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "message": 4
+                    },
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ],
+                    "owner": "cpptools"
+                }
+            ],
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "clear": true
+            },
+            "group": "build"
+        },
+        {
+            "label": "Build Redis World",
+            "type": "shell",
+            "command": "/u/prod/bin/mtimake",
+            "args": [
+                "--remote",
+                "-enable-redis",
+                "qworld"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build/linux_x86_64"
+            },
+            "problemMatcher": [
+                {
+                    "base": "$gcc",
+                    "background": {},
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ]
+                },
+                {
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(required from here)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "message": 4
+                    },
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ],
+                    "owner": "cpptools"
+                }
+            ],
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "clear": true
+            },
+            "group": "build"
+        },
+        {
+            "label": "Build World",
+            "type": "shell",
+            "command": "/u/prod/bin/mtimake",
+            "args": [
+                "--remote",
+                "world"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build/linux_x86_64"
+            },
+            "problemMatcher": [
+                {
+                    "base": "$gcc",
+                    "background": {},
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ]
+                },
+                {
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(required from here)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "message": 4
+                    },
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ],
+                    "owner": "cpptools"
+                }
+            ],
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "clear": true
+            },
+            "group": "build"
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "/u/prod/bin/mtimake",
+            "args": [
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build/linux_x86_64"
+            },
+            "problemMatcher": [
+                {
+                    "base": "$gcc",
+                    "background": {},
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ]
+                },
+                {
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(required from here)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "message": 4
+                    },
+                    "fileLocation": [
+                        "autoDetect",
+                        "${workspaceFolder}/build/linux_x86_64"
+                    ],
+                    "owner": "cpptools"
+                }
+            ],
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "clear": true
+            },
+            "group": "build"
+        }
+    ]
+}
